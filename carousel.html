@@ -20,6 +20,9 @@
   <style>
 @media (min-width: 768px) {
 
+.col-md-3{
+width:20% !important}
+
     /* show 3 items */
     .carousel-inner .active,
     .carousel-inner .active + .carousel-item,
@@ -100,8 +103,9 @@
 .carousel-item{
 	height:100%;
 	padding:0 !important;
-	background-image: url("img/city1.jpg");
-	background-repeat:round;
+	background-image: url("img/city2.jpg");
+	background-repeat:repeat-y;
+	background-size:cover;
 }
 
 .img-fluid{
@@ -132,7 +136,7 @@ body{
 	 
 	color:red;
     background-color: transparent;
-    display: flex;
+    display: grid;
 	align-items: center;
 	justify-content: center;
 	height:100%;
@@ -159,7 +163,9 @@ body{
               
                   <div class="panel-thumbnail align-items-center justify-content-center">
 					<div class="user-profile">
-						DRONEZONE
+	
+						<div class="user-name">DRONEZONE</div>
+						
 					
 						<!--
 						<a href="#" title="image 1" class="thumb">
@@ -171,7 +177,7 @@ body{
             </div>
             <div class="carousel-item col-md-3 ">
 				<div class="user-profile">
-						<span>DRONEZONE</span>
+						<span class="user-name">DRONEZONE<span>
 					</div>
               <!--
                   <div class="panel-thumbnail">
@@ -184,7 +190,7 @@ body{
             </div>
             <div class="carousel-item col-md-3 ">
 				<div class="user-profile">
-						DRONEZONE
+						<span class="user-name">DRONEZONE<span>
 					</div>
                <!--
                   <div class="panel-thumbnail">
@@ -196,7 +202,7 @@ body{
             </div>
             <div class="carousel-item col-md-3 ">
 				<div class="user-profile">
-						DRONEZONE
+						<span class="user-name">DRONEZONE<span>
 					</div>
                <!--
                   <div class="panel-thumbnail">
@@ -208,7 +214,7 @@ body{
             </div>
             <div class="carousel-item col-md-3 ">
 				<div class="user-profile">
-						DRONEZONE
+						<span class="user-name">DRONEZONE<span>
 					</div>
 				<!--
                   <div class="panel-thumbnail">
@@ -220,7 +226,7 @@ body{
             </div>
             <div class="carousel-item col-md-3 ">
 				<div class="user-profile">
-						DRONEZONE
+						<span class="user-name">DRONEZONE<span>
 					</div>
 				<!--
                   <div class="panel-thumbnail">
@@ -232,7 +238,8 @@ body{
             </div>
             <div class="carousel-item col-md-3 ">
 				<div class="user-profile">
-						DRONEZONE
+						<span class="user-name">DRONEZONE<span>
+						
 					</div>
                <!--
                   <div class="panel-thumbnail">
@@ -244,7 +251,7 @@ body{
             </div>
              <div class="carousel-item col-md-3  ">
 				<div class="user-profile">
-						DRONEZONE
+						<span class="user-name">DRONEZONE<span>
 					</div>
                <!--
                   <div class="panel-thumbnail">
@@ -283,6 +290,7 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
             // append slides to end
             if (e.direction=="left") {
                 $('.carousel-item').eq(i).appendTo('.carousel-inner');
+				
             }
             else {
                 $('.carousel-item').eq(0).appendTo('.carousel-inner');
@@ -314,9 +322,15 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
   
 $(".carousel-item").hover(function() {
     $('.carousel-item').not(this).addClass('foo');
+	$(this).find('.user-name').animate({
+        height: '+=20px'
+    }, 300);
 },
 function() {
      $('.carousel-item').not(this).removeClass('foo');
+	 $(this).find('.user-name').animate({
+        height: '-=20px'
+    }, 300);
 });
 
 
