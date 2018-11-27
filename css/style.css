@@ -1,0 +1,55 @@
+@font-face {
+	font-family: witecmonoton;
+	src: url('../fonts/Monoton-Regular.ttf'); /* Edit this line */
+}
+@font-face {
+	font-family: witecstandard;
+	src: url('../fonts/LatoLatin-Light.ttf'); /* Edit this line */
+
+}
+.validationHighlight{
+	background-color:#F08080;
+}
+body, h1, h2, h3, p{
+	font-family:witecstandard !important;
+}
+.text-overlay{
+	margin-top:50px;
+	text-align:right;
+	width: 100%;
+	padding:50px;
+}
+.bg-light{
+
+	background-color:black!important;
+}
+.nav-link{
+	color:white!important;
+}
+.navbar{
+	padding:0px;
+}
+section{
+	padding-top:0px;
+}
+.content-section{
+	padding-top:100px;
+}
+.banner{
+	display: inline-block;
+	background: #000;
+	color:#fff;
+	padding:0px 5px;
+}
+body {
+	margin-top:0 !important;
+	padding-top:0 !important;
+	/*min-width:800px !important;*/
+  }
+  .wb-autocomplete-suggestions {
+	  text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+	  position: absolute; display: none; z-index: 2147483647; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+  }
+  .wb-autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
+  .wb-autocomplete-suggestion b { font-weight: bold; }
+  .wb-autocomplete-suggestion.selected { background: #f0f0f0; }
